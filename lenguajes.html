@@ -1,0 +1,51 @@
+{% extends './base.html' %}
+
+{% block title %} Lenguajes {% endblock %}
+
+{% block body %}
+<!--Titulo-->
+<div class="row">
+<div class="col-md-4 offset-md-4" >
+<h1>Lenguajes de programación para back-end</h1>
+<header>
+    <style>
+        tbody{
+            color: azure;
+        }
+        thead{
+            color: azure;
+        }
+        td{
+            color: azure;
+        }
+        tr{
+            color: azure;
+        }
+    </style>
+<!--Table sobre lenguajes de programacion-->
+<div class="table-responsive">
+
+<table class="table table-striped">
+    <thead>
+<tr>
+    <th>#</th>
+    <th>Nombre</th>
+</tr>
+
+    </thead>
+    <tbody color="azure">
+       {% for leng in lenguajes %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{leng}}</td>
+        </tr>
+       {% endfor %}
+    </tbody>
+</table>
+
+</div>
+</div>
+</div>
+</header>
+
+{% endblock %}
